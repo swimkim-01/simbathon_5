@@ -20,4 +20,5 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('app1_simbathon5.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
