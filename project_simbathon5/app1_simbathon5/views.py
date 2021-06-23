@@ -4,3 +4,6 @@ from .models import Reserv
 
 def showmain(request):
     return render(request, 'app1_simbathon5/index.html')
+
+def reservation(request):
+    return render(request, 'app1_simbathon5/reserv.html')
