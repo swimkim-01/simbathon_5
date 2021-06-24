@@ -123,7 +123,12 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATCIC_DIR = os.path.join(BASE_DIR, "static")
 STATIC_URL = '/static/'
+
+STATCICFILES_DIRS = [
+    STATCIC_DIR,
+    ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
