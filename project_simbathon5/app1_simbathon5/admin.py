@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Reserv
+from .models import FAQ
 
 # Register your models here.
 
-admin.site.register(Reserv)
+admin.site.register(FAQ)

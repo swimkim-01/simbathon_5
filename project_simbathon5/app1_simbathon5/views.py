@@ -1,9 +1,14 @@
-from django.shortcuts import render
-from .models import Reserv
+from django.shortcuts import render,get_object_or_404
+from .models import FAQ
 # Create your views here.
 
 def showmain(request):
     return render(request, 'app1_simbathon5/index.html')
 
-def reservation(request):
-    return render(request, 'app1_simbathon5/reserv.html')
+def frequentlyaskedquestions(request):
+    faqs = FAQ.objects.all()
+    return render(request, 'app1_simbathon5/FAQ.html',{'faqs':faqs})
+
+def detail(request,id):
+    faq = get_object_or_404 (FAQ, pk = id)
+    return render(request, 'app1_simbathon5/FAQ.html',{'faq':faq})

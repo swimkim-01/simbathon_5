@@ -2,12 +2,15 @@ from django.db import models
 
 # Create your models here.
 
-class Reserv(models.Model):
-    stu_id = models.IntegerField()
-    writer = models.CharField(max_length= 100)
-    room = models.CharField(max_length = 100)
-    res_time = models.DateTimeField()
+class FAQ(models.Model):
+    id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length= 200)
+    pub_date = models.CharField(max_length = 100)
+    body = models.DateTimeField()
 
     def __str__(self):
-        return self.room
+        return self.title
+
+    def summary(self):
+        return self.body[20]
 
